@@ -1,0 +1,35 @@
+{
+  "name": "felix",
+  "version": "0.0.0",
+  "description": "Isomorphic caching module for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "scripts/test --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzabriskie/felix.git"
+  },
+  "keywords": [
+    "cache",
+    "caching"
+  ],
+  "author": "Matt Zabriskie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzabriskie/felix/issues"
+  },
+  "homepage": "https://github.com/mzabriskie/felix",
+  "devDependencies": {
+    "browserify": "^8.0.2",
+    "envify": "^3.2.0",
+    "karma": "^0.12.30",
+    "karma-browserify": "^2.0.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.1.0",
+    "uglify-js": "^2.4.16"
+  }
+}

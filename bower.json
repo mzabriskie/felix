@@ -1,0 +1,25 @@
+{
+  "name": "felix",
+  "main": "dist/felix.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mzabriskie/felix",
+  "authors": [
+    "Matt Zabriskie"
+  ],
+  "description": "Isomorphic caching module for JavaScript",
+  "keywords": [
+    "cache",
+    "caching"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "lib",
+    "scripts",
+    "specs",
+    "index.js",
+    "karma.conf.js",
+    "package.json"
+  ]
+}

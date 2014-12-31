@@ -1,0 +1,8 @@
+#!/bin/sh
+mkdir -p dist
+NODE_ENV=production node_modules/.bin/browserify index.js \
+  -t envify \
+  --detect-globals false \
+  -s felix > dist/felix.js
+node_modules/.bin/uglifyjs dist/felix.js \
+  --compress warnings=false > dist/felix.min.js
