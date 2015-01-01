@@ -42,6 +42,15 @@ describe('Cache', function () {
     deepEqual(cache.__cache, {});
   });
 
+  it('should provide cache keys', function () {
+    cache.put('foo', 123);
+    cache.put('bar', 456);
+    deepEqual(cache.keys(), ['foo', 'bar']);
+
+    cache.remove('bar');
+    deepEqual(cache.keys(), ['foo']);
+  });
+
   it('should keep track of size', function () {
     equal(cache.size(), 0);
 
