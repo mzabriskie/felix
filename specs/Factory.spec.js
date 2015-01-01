@@ -17,6 +17,12 @@ describe('Factory', function () {
     equal(Factory.get('test'), cache);
   });
 
+  it('should support removing a cache', function () {
+    Factory.create('test');
+    Factory.remove('test');
+    equal(Factory.get('test'), null);
+  });
+
   it('should clear caches', function () {
     Factory.create('test');
     Factory.clear();
