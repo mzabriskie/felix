@@ -1,4 +1,1 @@
-module.exports = {
-  Cache: require('./lib/Cache'),
-  Factory: require('./lib/Factory')
-}
+module.exports = require('./lib/Factory');
