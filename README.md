@@ -1,8 +1,8 @@
 # felix
 
-Isomorphic caching module for JavaScript
+Isomorphic in-memory caching module for JavaScript
 
-# Installing
+## Installing
 
 ```bash
 $ npm install felix
@@ -10,38 +10,65 @@ $ npm install felix
 $ bower install felix
 ```
 
-# Example
+## Example
 
 ```js
-var factory = require('felix').Factory;
-var exampleCache = factory.create('example');
+var felix = require('felix');
+var cache = factory.create('example');
 
-exampleCache.put('foo', 123);
-exampleCache.put('bar', 456);
-console.log(exampleCache.get('foo')); // 123
-console.log(exampleCache.get('bar')); // 456
-console.log(exampleCache.size()); // 2
+cache.put('foo', 123);
+cache.put('bar', 456);
+console.log(cache.get('foo')); // 123
+console.log(cache.get('bar')); // 456
+console.log(cache.size()); // 2
 
-exampleCache.remove('foo');
-console.log(exampleCache.size()); // 1
+cache.remove('foo');
+console.log(cache.size()); // 1
 
-exampleCache.clear();
-console.log(exampleCache.size()); // 0
+cache.clear();
+console.log(cache.size()); // 0
 ```
 
-If you want to reference a cache that's already been created:
+## API
 
-```js
-var factory = require('felix').Factory;
-factory.create('example');
+### felix
 
-// Elsewhere in your code...
-var exampleCache = factory.get('example');
-```
+The top level API for `felix` is used to manage stored `Cache` objects.
 
-You may also forgo the factory all together:
+##### felix.create(id)
+Construct a cache object identified by `id`
 
-```js
-var Cache = require('felix').Cache;
-var exampleCache = new Cache();
-```
+##### felix.get(id)
+Get a cache object by it's identifier
+
+##### felix.remove(id)
+Remove a cache by it's identifier
+
+##### felix.clear()
+Clear all caches
+
+### Cache
+
+The `Cache` object is what is returned by `felix.create` and `felix.get`.
+
+##### put(key, val)
+Put a key-value pair into the cache
+
+##### get(key)
+Get the cached value for `key`
+
+##### remove(key)
+Remove the cached value for `key`
+
+##### clear()
+Clear all cached values
+
+##### size()
+Get the size of the cache
+
+##### keys()
+Get all the cache keys
+
+## License
+
+MIT
