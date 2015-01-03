@@ -1,19 +1,22 @@
 {
   "name": "felix",
   "main": "dist/felix.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/mzabriskie/felix",
   "authors": [
     "Matt Zabriskie"
   ],
-  "description": "Isomorphic caching module for JavaScript",
+  "description": "In-memory caching module for JavaScript",
   "keywords": [
     "cache",
-    "caching"
+    "caching",
+    "store",
+    "storage"
   ],
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "example",
     "node_modules",
     "lib",
     "scripts",

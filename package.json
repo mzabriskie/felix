@@ -1,7 +1,7 @@
 {
   "name": "felix",
-  "version": "0.0.0",
-  "description": "Isomorphic caching module for JavaScript",
+  "version": "0.1.0",
+  "description": "In-memory caching module for JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "scripts/test --single-run"
@@ -12,7 +12,9 @@
   },
   "keywords": [
     "cache",
-    "caching"
+    "caching",
+    "store",
+    "storage"
   ],
   "author": "Matt Zabriskie",
   "license": "MIT",
