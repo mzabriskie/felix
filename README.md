@@ -1,6 +1,6 @@
 # felix [![Build Status](https://travis-ci.org/mzabriskie/felix.svg?branch=master)](https://travis-ci.org/mzabriskie/felix)
 
-Isomorphic in-memory caching module for JavaScript
+In-memory caching module for JavaScript
 
 ## Installing
 
