@@ -1,0 +1,7 @@
+**/.*
+example
+node_modules
+scripts
+specs
+bower.json
+karma.conf.js
