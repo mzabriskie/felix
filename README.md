@@ -14,7 +14,7 @@ $ bower install felix
 
 ```js
 var felix = require('felix');
-var cache = factory.create('example');
+var cache = felix.create('example');
 
 cache.put('foo', 123);
 cache.put('bar', 456);
