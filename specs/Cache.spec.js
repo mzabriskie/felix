@@ -20,7 +20,7 @@ describe('Cache', function () {
 
   it('should support putting cache values', function () {
     cache.put('foo', 'bar');
-    equal(cache.__cache['foo'], 'bar');
+    equal(cache.__store['foo'], 'bar');
   });
 
   it('should support getting cache values', function () {
@@ -39,7 +39,7 @@ describe('Cache', function () {
     cache.put('foo', 123);
     cache.put('bar', 456);
     cache.clear();
-    deepEqual(cache.__cache, {});
+    deepEqual(cache.__store, {});
   });
 
   it('should provide cache keys', function () {
