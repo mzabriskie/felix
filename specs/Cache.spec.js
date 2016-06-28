@@ -7,7 +7,7 @@ describe('Cache', function () {
   var cache;
 
   beforeEach(function () {
-    cache = Factory.create();
+    cache = Factory.create('forever_ttl');
   });
 
   afterEach(function () {
@@ -84,5 +84,22 @@ describe('Cache', function () {
 
     cache.clear();
     equal(cache.size(), 0);
+  });
+
+  it('should respect an explicit ttl', function (done) {
+    cache.put('foo', 123, 500);
+    setTimeout(function () {
+      equal(cache.get('foo'), undefined);
+      done()
+    }, 750);
+  });
+
+  it('should respect the default ttl', function(done) {
+    cache = Factory.create('expiring ttl', {maxAge: 500});
+    cache.put('foo', 123);
+    setTimeout(function () {
+      equal(cache.get('foo'), undefined);
+      done();
+    }, 750);
   });
 });
